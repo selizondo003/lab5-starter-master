@@ -20,6 +20,14 @@ const mypause = document.getElementById('mypause');
 const mymute = document.getElementById('mymute');
 const myunmute = document.getElementById('myunmute');
 
+
+//section list
+const saveMovement = document.getElementById('saveMovement'); 
+const ecoEngineer = document.getElementById('ecoEngineer'); 
+const whalePoop = document.getElementById('whalePoop'); 
+const whaleCarcas = document.getElementById('whaleCarcas'); 
+
+
 vid.src = "assets/vosWhale.mp4";
 vid.load();
 
@@ -27,7 +35,6 @@ vid.load();
 
 myplay.addEventListener('click', (e) => {
     playVideo(vid);
-    console.log("hello");
 });
 
 mypause.addEventListener('click', (e) => {
@@ -43,6 +50,22 @@ myunmute.addEventListener('click', (e) =>{
 });
 
 
+//creating certain sections in video 
+saveMovement.addEventListener('click',(e) =>{
+    vid.currentTime=42;
+});
+ecoEngineer.addEventListener('click',(e) =>{
+    vid.currentTime=93;
+});
+whalePoop.addEventListener('click',(e) =>{
+    vid.currentTime=124.12;
+});
+whaleCarcas.addEventListener('click',(e) =>{
+    vid.currentTime=189.50;
+});
+
+
+
 
 
 
@@ -52,9 +75,9 @@ myunmute.addEventListener('click', (e) =>{
 document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
-        { seconds: 2, callback: engineer },
-        { seconds: 96, callback: func2 },
-        { seconds: 15, callback: func3 }
+        { seconds: 25, callback: wwf },
+        { seconds: 96, callback: func3 },
+        { seconds: 96, callback: engineer }
     ];
 
     //this activates the cuepoints module.
@@ -70,12 +93,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
 //the custom callback functions to trigger when a cuepoint is hit.
 //You can code up whatever behavior you need in your own callbacks
 //feel free to rename the functions to be more descriptive of what they do.
+function wwf() {
+
+        document.getElementById("web").src="https://www.worldwildlife.org/species/whale";
+        
+    }
+    
+
 function engineer () {
     document.getElementById("web").src="https://www.uvm.edu/news/story/whales-ecosystem-engineers";
-}
-
-function func2() {
-    
 }
 
 function func3() {
