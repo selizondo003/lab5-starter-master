@@ -1,29 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>HTML5 Video with JS synchronized cuepoints: demo</title>
-	<meta charset="utf-8">
-
-	<link rel="stylesheet" href="c/main.css">
-	<script type="module" src="j/main.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+    <link rel="stylesheet" href="c/main.css">
+	<script src="j/video_helpers.js"></script>
+    <script src="j/main.js" type="module"></script>
+	
 </head>
 
 <body>
-	<h1>HTML5 Video with JS synchronized cuepoints: demo</h1>
+	<h1>Lab 5: HTML5 Video with JS synchronized cuepoints</h1>
+	<h2>Why Whale Poop is Important</h2> 
 
 	<main id="container">
 
 		<section class="col1">
 
-			<video id="vid" width="352" controls>
+			<video id="vid"  class="whale" width="352" controls>
 				<source src="assets/vosWhale.mp4" type="video/mp4">
 				<source src="assets/vosWhale.ogv" type="video/ogg">
 				<track kind="captions" label="On" srclang="en" src="./captions/whale.vtt" default>
 
+				<p>Here is a link to the video file itself
+					<a href="assets/vosWhale.mp4">Video here</a>
+				</p>
 				<!-- final fallback to text -->
-				<h2></h2>
+				<h2>Why Whale Poop is important </h2>
 				<p>
 					In the 1600s, there were so many right whales in Cape Cod Bay off the east coast of the U.S. that apparently you could walk across their backs from one end of the bay to the other. Today, they number in the hundreds, and they're endangered. Like them, many species of whales saw their numbers drastically reduced by 200 years of whaling, where they were hunted and killed for their whale meat, oil and whale bone.
 
@@ -69,33 +74,12 @@
 
 
 			<div id="controls">
-				<form id="video_form">
-					<fieldset>
-						<input type="button" id="play_button" onclick="" value="Play">
-						<input type="button" id="pause_button" onclick="" value="Pause">
-						<input type="button" id="mute" onclick="" value="Mute">
-						<input type="button" id="unmute" onclick="" value="Unmute">
-						<input type="button" id="rewind" onclick="" value="Beginning">
-						<input type="button" id="end" onclick="" value="End" >
-						<input type="button" id="seek" onclick="" value="Go to Statistics">
-					</fieldset>
-					<fieldset>
-						<select id="video_select">
-							<option>Select a video to play...</option>
-							<option value="assets/vosWhale.mp4">Whale(mp4)</option>
-							<option value="assets/vosWhale.ogv">Whale(ogv)</option>
-							
-						</select>
-					</fieldset>
-					<fieldset>
-						<label>Currently, rewind only works in Safari
-							<input type=button id="rw" onclick="" value="&lt; &lt;rewind">
-						</label>
-						<input type=button id="ff" onclick="" value="fast forward >>">
-						<input type=button id="slo" onclick="" value="slo mo">
-						<input type=button id="normal" onclick="" value="normal">
-					</fieldset>
-				</form>
+				
+						<button id="myplay">play</button>
+        				<button id="mypause">pause</button>
+						<button id="mymute">mute</button>
+        				<button id="myunmute">unmute</button>
+					
 			</div>
 
 			<div class="pop hide">

@@ -12,12 +12,48 @@
  */
 
 import { cueTimer } from "./modules/cuepoints.js";
+const vid = document.querySelector('.whale');
+
+//video control buttons
+const myplay = document.getElementById('myplay');
+const mypause = document.getElementById('mypause');
+const mymute = document.getElementById('mymute');
+const myunmute = document.getElementById('myunmute');
+
+vid.src = "assets/vosWhale.mp4";
+vid.load();
+
+//add event listeners for control
+
+myplay.addEventListener('click', (e) => {
+    playVideo(vid);
+    console.log("hello");
+});
+
+mypause.addEventListener('click', (e) => {
+    pauseVideo(vid);
+});
+
+mymute.addEventListener('click', (e) => {
+    muteVid(vid);
+});
+
+myunmute.addEventListener('click', (e) =>{
+    unmuteVid(vid);
+});
+
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
-        { seconds: 2, callback: func1 },
-        { seconds: 9, callback: func2 },
+        { seconds: 2, callback: engineer },
+        { seconds: 96, callback: func2 },
         { seconds: 15, callback: func3 }
     ];
 
@@ -26,14 +62,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     // and the array of cuepoint objects.
     cueTimer.setup("vid", myCues);
 
-    //shortcut variables
-    const vid = document.querySelector("#vid");
-    const selectList = document.querySelector("#video_select");
-
-    // make the select list control what video format to play
-    selectList.addEventListener("change", (e) => {
-        selectVideo(e, vid);
-    });
 
 });
 
@@ -42,8 +70,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 //the custom callback functions to trigger when a cuepoint is hit.
 //You can code up whatever behavior you need in your own callbacks
 //feel free to rename the functions to be more descriptive of what they do.
-function func1() {
-
+function engineer () {
+    document.getElementById("web").src="https://www.uvm.edu/news/story/whales-ecosystem-engineers";
 }
 
 function func2() {
