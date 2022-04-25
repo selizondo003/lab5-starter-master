@@ -67,17 +67,16 @@ whaleCarcas.addEventListener('click',(e) =>{
 
 
 
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
-        { seconds: 25, callback: wwf },
-        { seconds: 96, callback: func3 },
-        { seconds: 96, callback: engineer }
+        
+        { seconds: 11, callback: bG},
+        { seconds: 2, callback: image },
+        { seconds: 97, callback: engineer },
+        { seconds: 124.12, callback: feces}
+        
+        
     ];
 
     //this activates the cuepoints module.
@@ -93,20 +92,21 @@ document.addEventListener("DOMContentLoaded", (e) => {
 //the custom callback functions to trigger when a cuepoint is hit.
 //You can code up whatever behavior you need in your own callbacks
 //feel free to rename the functions to be more descriptive of what they do.
-function wwf() {
-
-        document.getElementById("web").src="https://www.worldwildlife.org/species/whale";
+function bG() {
         
-    }
-    
+        document.body.style.backgroundColor = "teal";       
+    };
+
+function image() {
+        document.getElementById("web").src= "/images/imgWhale.jpg";
+        };
 
 function engineer () {
+    pauseVideo(vid);
     document.getElementById("web").src="https://www.uvm.edu/news/story/whales-ecosystem-engineers";
-}
+};
 
-function func3() {
-
-}
-
-
+function feces(){
+    document.getElementById("web").src="/images/WhalePump.jpg";
+};
 

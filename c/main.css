@@ -8,7 +8,7 @@ body {
   background: rgb(204, 219, 240);
 }
 
-h1 {
+h1, h2 {
 	text-align:center;
 }
  
@@ -34,7 +34,10 @@ h1 {
  
 
 .col2 {
-	height: 100vh;
+  width: 750px;
+  height: 1500px;
+  padding: 0;
+  overflow: hidden;
 }
 
 
@@ -82,7 +85,7 @@ iframe {
 	font-weight:bold;
 	z-index:3;
   opacity: 1;
-  transition: all .1s;
+  transition: all 2s;
 }
 
 
