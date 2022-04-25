@@ -101,7 +101,7 @@ function bG() {
 };
 
 function image() {
-    document.getElementById("web").src = "/images/imgWhale.jpg";
+    document.getElementById("web").src = "images/imgWhale.jpg";
 };
 
 function engineer() {
@@ -110,7 +110,7 @@ function engineer() {
 };
 
 function feces() {
-    document.getElementById("web").src = "/images/WhalePump.jpg";
+    document.getElementById("web").src = "images/WhalePump.jpg";
     pauseVideo(vid);
 
 
